@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: 100vh;
+    flex-direction: column;
+    background-color: rgb(245, 246, 255);
+    font-family: 'Roboto', sans-serif;
+}
+
+.week-list {
+    display: flex;
+    height: 80px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 7px rgb(245, 246, 255);
+}
+
+.week-list > span {
+    height: 45px;
+    padding: 1rem 1.25rem;
+    background-color: rgb(245, 246, 255);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(245, 246, 255);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.week-list > span:hover {
+    box-shadow: 0 5px 15px rgb(187, 188, 193);
+}
+
+.week-list > span::first-letter {
+    text-transform: uppercase;
+}
+
+/*  */
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 1rem 3rem;
+    height: 100vh;
+}
+
+.container > article {
+    width: 30%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 5px 8px rgb(245, 246, 255);
+    transition: all 0.5s;
+    padding: 0 0 0.8rem 0;
+    border-radius: 8px;
+}
+
+.container > article:hover {
+    box-shadow: 0 5px 15px rgb(187, 188, 193);
+}
+
+.container > article > h2 {
+    font-size: 20px;
+    height: 50px;
+    padding-left: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.container > article > img {
+    width: 100%;
+    height: calc(100% - 85px);
+    object-fit: cover;
+}
+
+.container > article > ul {
+    list-style-type: none;
+    display: flex;
+    gap: 5px;
+    padding: 0 0.5rem;
+    flex-flow: row wrap;
+}
+
+.container > article > ul > li {
+    padding: 0.5rem;
+    background-color: rgb(245, 246, 255);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(245, 246, 255);
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.container > article > ul > li.off {
+    background-color: red;
+    pointer-events: none;
+}
+.container > article > ul > li:hover {
+    box-shadow: 0 5px 15px rgb(187, 188, 193);
+}
+
+@media only screen and (max-width: 1024px) {
+    .container {
+        flex-flow: column;
+        height: auto;
+    }
+    .container > article {
+        width: 100%;
+    }
+
+    .week-list {
+        flex-wrap: wrap;
+        height: auto;
+        justify-content: flex-start;
+        gap: 10px;
+        padding: 1rem;
+    }
+}
